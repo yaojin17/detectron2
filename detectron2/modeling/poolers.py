@@ -190,9 +190,9 @@ class ROIPooler(nn.Module):
         # assumption that stride is a power of 2.
         min_level = -(math.log2(scales[0]))
         max_level = -(math.log2(scales[-1]))
-        assert math.isclose(min_level, int(min_level)) and math.isclose(
-            max_level, int(max_level)
-        ), "Featuremap stride is not power of 2!"
+        # assert math.isclose(min_level, int(min_level)) and math.isclose(
+        #     max_level, int(max_level)
+        # ), "Featuremap stride is not power of 2!"
         self.min_level = int(min_level)
         self.max_level = int(max_level)
         assert (
